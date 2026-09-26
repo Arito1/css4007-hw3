@@ -21,18 +21,18 @@ your own numbers rather than a guess.
 
 ## 0. How this works
 
-This repository is a **template**. Do not clone it directly and do not open
-pull requests against it.
+You work in **your own fork** of this repository. Do not open pull requests
+against it.
 
-1. **Use this template → Create a new repository.** Name it `hw3-<your-github-username>`.
-   Keep it **private**; add the instructor as a collaborator.
-2. Clone *your copy* and work there, locally or in Colab.
+1. **Fork it** (the **Fork** button, top right). Keep your fork **public**, so
+   the instructor can read it without being added to anything.
+2. Clone *your fork* and work there, locally or in Colab.
 3. Work through `HW3.ipynb`. **It is the submission.** Every section below has a
    heading in it, and every table you are asked for has a blank copy in it.
 4. **Run the notebook top to bottom before you push**, so that every output is
    saved in the file. A cell with no output earns nothing. Neither does a table
    typed in by hand that no cell printed.
-5. Push, and submit your repository link on the LMS before the deadline.
+5. Push to your fork, and submit your fork's link on the LMS before the deadline.
 
 > There is no autograder. A human reads your notebook. That cuts both ways:
 > nothing checks your work as you go, so rerun things and paste the numbers you
@@ -52,9 +52,8 @@ cp .env.example .env             # then put both keys in .env
 jupyter lab HW3.ipynb
 ```
 
-In Colab, upload the repository (or `git clone` your private copy with a
-token), `pip install -r requirements.txt`, and put the two keys in Colab's
-*Secrets* panel rather than in a cell.
+In Colab, `git clone` your fork, `pip install -r requirements.txt`, and put the
+two keys in Colab's *Secrets* panel rather than in a cell.
 
 You need two accounts:
 
@@ -71,8 +70,10 @@ you why. The model is 300M parameters (about 1.2 GB) and runs on a laptop CPU.
 Embedding all 74 chunks takes well under a minute. Keep it at the default
 `float32`, because EmbeddingGemma does not support `float16`.
 
-**`.env` is in `.gitignore`. Never commit a key.** That goes for a key pasted
-into a notebook cell too, since the notebook is what you push. If a key does get
+**`.env` is in `.gitignore`. Never commit a key.** Your fork is public, so a
+committed key is readable by anyone, and bots scan GitHub for them within
+minutes. That goes for a key pasted into a notebook cell too, and for a key
+printed in a cell's output, since the notebook is what you push. If a key does get
 pushed, revoke it immediately and say so in the notebook. Disclosure costs you
 nothing; a silent leaked key is an integrity issue.
 
@@ -357,7 +358,7 @@ why.
 - [ ] Final questions and conclusion answered
 - [ ] Notebook run top to bottom, outputs saved
 - [ ] `.env` **not** committed (`git log --all -- .env` returns nothing), and no key in any cell
-- [ ] Repository link submitted on the LMS
+- [ ] Your fork is public, and its link is submitted on the LMS
 
 ## 8. Academic integrity
 
